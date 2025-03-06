@@ -97,6 +97,30 @@ project-root/
 4. **Configure VS Code Settings:**
    *  Leave the "Custom Instructions" text boxes **empty** in the Roo Code Prompts section of your VS Code settings. RooFlow uses file-based configuration.
 
+5. **memory_setup.sh**
+
+`memory_setup.sh` is a script that instantly configures the necessary Roo Flow settings for each project.
+With this script, you don't have to manually copy files over and over once you download them.
+
+First, set the local path for the downloaded RooFlow:
+``
+SOURCE_DIR="/Users/ts21/dev/RooFlow"
+``
+Next, run the following command to grant execution permissions
+
+```
+$chmod +x memor_setup.sh
+```
+
+The recommended way to execute the script is by setting an alias.
+Below is an example of how to set it in your dotfiles:
+
+```
+$alias memory='~/dotfiles/memory_setup.shell'
+$source ~/.zshrc
+```
+
+
 ### 2. Using RooFlow
 
 1.  **Start a Chat:** Open a new Roo Code chat in your project.
@@ -158,4 +182,3 @@ Contributions to RooFlow are welcome! Please see the [CONTRIBUTING.md](CONTRIBUT
   [Apache 2.0](LICENSE)
 
 ---
-```
