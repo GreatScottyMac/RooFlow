@@ -94,8 +94,9 @@ project-root/
     └── decisionLog.md
 ```
 
-4. **Configure VS Code Settings:**
-   *  Leave the "Custom Instructions" text boxes **empty** in the Roo Code Prompts section of your VS Code settings. RooFlow uses file-based configuration.
+4. **Configure Roo Code Prompt Settings:**
+   *  Role Definition box: You are Roo's [mode name] mode
+   *  Mode-specific Custom Instructions box: Leave blank.
 
 ### 2. Using RooFlow
 
