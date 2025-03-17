@@ -95,7 +95,7 @@ project-root/
     3. Run the script:
        ##### From Command Prompt:
        ```cmd
-        insert-variables.cmd
+        ./insert-variables.sh
        ```
        ##### From PowerShell:
        ```powershell
