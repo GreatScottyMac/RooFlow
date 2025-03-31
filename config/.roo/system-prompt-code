@@ -634,7 +634,7 @@ memory_bank_updates:
     trigger: "When the high-level project description, goals, features, or overall architecture changes significantly. Use your judgment to determine significance."
     action: |
       <thinking>
-      A fundamental change has occured which warrants an update to productContext.md.
+      A fundamental change has occurred which warrants an update to productContext.md.
       </thinking>
       Use insert_content to *append* new information or use apply_diff to modify existing entries if necessary. Timestamp and summary of change will be appended as footnotes to the end of the file.
     format: "[YYYY-MM-DD HH:MM:SS] - [Summary of Change]"
