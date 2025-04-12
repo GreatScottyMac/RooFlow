@@ -65,9 +65,13 @@ flowchart LR
 
    3.  **Open your terminal** and navigate (`cd`) to your project's **root directory**.
    4.  **Run the appropriate command** for your operating system directly:
-       *   **Windows (Command Prompt or PowerShell):**
+       *   **Windows (Command Prompt):**
            ```cmd
            curl -L https://raw.githubusercontent.com/GreatScottyMac/RooFlow/main/config/install_rooflow.cmd | cmd
+           ```
+       *   **Windows (PowerShell):**
+           ```powershell
+           Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/GreatScottyMac/RooFlow/main/config/install_rooflow.ps1')
            ```
        *   **Linux / macOS (bash/zsh):**
            ```bash
@@ -76,7 +80,7 @@ flowchart LR
    5.  The command downloads and executes the script, which will check for `git`, clone the repository, move files, clean up, and run the variable insertion process. Follow any on-screen prompts or error messages.
    6.  **Note:** Upon successful completion, the downloaded scripts (`install_rooflow.*` and `insert-variables.*`) will be automatically removed.
 
-   4.  **Verify Installation:** After the script runs successfully:
+   7.  **Verify Installation:** After the script runs successfully:
        *   Check that the `.roo/` directory, along with the `.roomodes`file exist in your project root.
        *   Optionally, inspect the `.roo/system-prompt-*` files to ensure placeholders like `WORKSPACE_PLACEHOLDER` have been replaced with your actual system paths.
 
@@ -84,21 +88,21 @@ flowchart LR
 
    Since the Default and Boomerang modes both use the default Roo Code system prompt, you may wish to make these modes global. If so, follow these manual steps using the Roo Code UI:
 
-   1.  **Open Roo Code Settings:** Click the Roo Code icon in the VS Code Activity Bar, then click the "Prompts" icon (looks like a book/document - Step 1 in image below).
+   8.  **Open Roo Code Settings:** Click the Roo Code icon in the VS Code Activity Bar, then click the "Prompts" icon (looks like a book/document - Step 1 in image below).
     <br> 
     <img src="https://raw.githubusercontent.com/GreatScottyMac/RooFlow/main/images/prompt-settings.png" alt="Prompt Settings Icon" width="200"/>
 
-   2.  **Add New Mode:** Scroll down to the "Modes" section and click the "+" icon (Step 2)
+   9.  **Add New Mode:** Scroll down to the "Modes" section and click the "+" icon (Step 2)
 
-   3.  **Enter Name:** In the "Create New Mode" view, enter the mode name (`Default` or `Boomerang`) in the "Name" field (Step 3).
+   10. **Enter Name:** In the "Create New Mode" view, enter the mode name (`Default` or `Boomerang`) in the "Name" field (Step 3).
     <br> <!-- Optional: Add a line break for spacing -->
     <img src="https://raw.githubusercontent.com/GreatScottyMac/RooFlow/main/images/create-global-mode.png" alt="Create Mode View" width="200"/>
 
-   4.  **Slug:** The "Slug" field should automatically populate with `default` or `boomerang` (Step 4).
+   11. **Slug:** The "Slug" field should automatically populate with `default` or `boomerang` (Step 4).
 
-   5.  **Save Location:** Select "Global" (Step 5).
+   12. **Save Location:** Select "Global" (Step 5).
 
-   6.  **Role Definition:** Copy the text below and paste it into the "Role Definition" text box (Step 6).
+   13. **Role Definition:** Copy the text below and paste it into the "Role Definition" text box (Step 6).
 
    For Default mode:
  ```text      
@@ -110,7 +114,7 @@ You are Roo, a strategic workflow orchestrator who coordinates complex tasks by 
 ```
 <br>
 
-   7.  **Custom Instructions:** Copy the custom instructions for the relevant mode, provided below, and paste it into the "Custom Instructions" text box (Step 7).
+   1.  **Custom Instructions:** Copy the custom instructions for the relevant mode, provided below, and paste it into the "Custom Instructions" text box (Step 7).
 
 <br>
 
@@ -800,12 +804,12 @@ umb:
 
 The Memory Bank is a directory named `memory-bank` located in your project's root. It contains several Markdown files that store different aspects of your project's knowledge:
 
-| File                 | Purpose                                                                                                                               |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| `activeContext.md`   | Tracks the current session's context: recent changes, current goals, and open questions/issues.                                       |
-| `decisionLog.md`     | Records architectural and implementation decisions, including the context, decision, rationale, and implementation details.        |
-| `productContext.md`  | Provides a high-level overview of the project, including its goals, features, and overall architecture.                             |
-| `progress.md`        | Tracks the progress of the project, including completed work, current tasks, and next steps.  Uses a task list format.               |
+| File                | Purpose                                                                                                                                |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `activeContext.md`  | Tracks the current session's context: recent changes, current goals, and open questions/issues.                                        |
+| `decisionLog.md`    | Records architectural and implementation decisions, including the context, decision, rationale, and implementation details.            |
+| `productContext.md` | Provides a high-level overview of the project, including its goals, features, and overall architecture.                                |
+| `progress.md`       | Tracks the progress of the project, including completed work, current tasks, and next steps.  Uses a task list format.                 |
 | `systemPatterns.md` | (Optional) Documents recurring patterns and standards used in the project (coding patterns, architectural patterns, testing patterns). |
 
 RooFlow automatically manages these files. You generally don't need to edit them directly, although you can review them to understand the AI's knowledge.
