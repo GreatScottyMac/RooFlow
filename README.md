@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/greatscottymac-rooflow-badge.png)](https://mseep.ai/app/greatscottymac-rooflow)
+
 <div align="center">
 
 ## ⚠️ Alternate System Prompt Format for Roo Code ⚠️
